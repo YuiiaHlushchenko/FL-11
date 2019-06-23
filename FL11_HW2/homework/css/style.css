@@ -1,0 +1,203 @@
+@keyframes rotation{
+    10%{ transform:scaleX(1); }
+    50%{ transform:scaleX(-1); }
+    90% { transform:scaleX(1); }
+}
+nav > ul > li:hover{
+    background: lightgray;
+}
+nav > ul > li > a{
+    cursor: none;
+}
+h2 + p{
+    font-style: italic;
+    line-height: 30px;
+    text-indent: 1.5em;
+}
+.heading > .padding-medium > h2{
+    color: #76cdd7;
+    text-align: center;
+}
+ol{
+    list-style: lower-roman;
+}
+ol > li > a{
+    border-left: 2px solid white;
+    padding-left: 1px;
+}
+a:visited {
+    color: #ffb347;
+}
+ol > li > a:hover{
+    color: #ffb347;
+    text-decoration: none;
+    font-weight: bold;
+    border-left: 2px solid #ffb347;
+    cursor: default;
+}
+ol > li > a.text:after{
+    content: "New";
+    color: red;
+    vertical-align: super;
+    font-size: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+.heading, .tm-content-box{
+    box-shadow: 0 0 10px 0 rgba(61, 55, 61, 0.7);
+}
+.blocks > div > ul.boxes > li:nth-child(2n){
+    background-color: lightgray;
+}
+.blocks > div > ul.boxes > li{
+    padding: 10px;
+}
+.blocks > div > ul.boxes > li > div > p{
+    text-indent: 0;
+}
+#about > ul > li:nth-child(2n + 1):hover{
+    background-color: skyblue;
+}
+
+#about > ul > li:nth-child(2n + 1):hover > h2{
+    color: white;
+    font-weight: bold;
+    cursor: default;
+}
+section > div, #home, nav {
+    box-shadow: 0 0 10px 0 rgba(61, 55, 61, 0.7);
+}
+.tm-banner{
+    background-color: #76cdd7;
+}
+.tm-banner-inner{
+    background-color: #fff;
+}
+.tm-banner-inner > p{
+    animation: rotation 3s infinite ease-in-out;
+    text-shadow: 0 7px 2px #76cdd7;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+}
+button{
+    float: right;
+    height: 50px;
+    width: 130px;
+}
+.submit-btn {
+    border-radius: 0;
+    background-color: #fff;
+    border: 1px solid #5bc0de;
+    color: #5bc0de;
+}
+.submit-btn:hover{
+    background-color: #5bc0de;
+    color: #fff;
+    border-color: #5bc0de;
+}
+input[type=text], input[type=email] {
+    border: none;
+    border-bottom: 2px solid #5bc0de;
+}
+#contact_message{
+    border: 2px solid #5bc0de;
+    border-radius: 4px;
+    resize: none;
+}
+input[type=email]:focus, input[type=text]:focus {
+    background-color: #5bc0de;
+    border-radius: 4px;
+    color: white;
+}
+input[type=email]:focus{
+    background-image: url('../img/email-icon.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 27px;
+}
+section:before{
+    width: 0;
+    height: 0;
+    content: ' ';
+    border-right: 50px solid transparent;
+    border-left: 50px solid #5bc0de;
+    position: absolute;
+    /*transform: rotate(-45deg);*/
+    border-bottom: 50px solid transparent;
+}
+
+@media print {
+    .tm-sidebar {
+       display: none;
+   }
+    .tm-main-content{
+        padding-top: 0;
+    }
+    section:before{
+        border-left: 50px solid transparent;
+    }
+    h2, p{
+        text-align: center;
+    }
+    p{
+        font-size: 12px;
+    }
+    section > div > div{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .tm-team-description-container{
+        max-width: 100%;
+    }
+    .padding-medium{
+        padding: 0;
+    }
+    .tm-team-img{
+        display: none;
+    }
+    #about, .carousel-indicators{
+        display: none;
+    }
+    .blocks > .tm-content-box {
+        display: none;
+    }
+    .container > .tm-main-content > .tm-content-box > img, #contact{
+        display: none;
+    }
+    .tm-content-box{
+        margin: 0;
+    }
+    footer{
+        margin: 0;
+        padding: 0;
+    }
+    #tmCarousel{
+        padding: 0;
+    }
+    ol{
+        list-style: none;
+        width: 50%;
+        margin-left: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    ol > li:nth-child(2n+1){
+        align-self: flex-start;
+        text-transform: capitalize;
+    }
+    ol >li> a , a:visited{
+        color: black;
+    }
+    ol > li:first-letter{
+        font-size: 25px;
+        color: #5bc0de;
+    }
+    ol > li > a:after{
+        display: none;
+    }
+    .heading > .padding-medium > h2{
+        font-weight: 300;
+        color: #35788b;
+    }
+}
